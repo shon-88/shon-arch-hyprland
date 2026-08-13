@@ -1,0 +1,136 @@
+@import "eva-theme.css";
+* {
+  font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+window#waybar {
+  background-color: @base;
+  border-radius: 13px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+button {
+  box-shadow: inset 0 -3px transparent;
+  border: none;
+  border-radius: 0;
+}
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px #ffffff;
+}
+#pulseaudio:hover {
+  background-color: @surface2;
+}
+#workspaces button {
+  padding: 0 5px;
+  background-color: transparent;
+  color: #646496;
+}
+#workspaces button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+#workspaces button.active {
+  background-color: #646496;
+  color: @base;
+  box-shadow: inset 0 -3px #ffffff;
+}
+#workspaces button.urgent {
+  background-color: @sapphire;
+  color: @base;
+}
+#mode {
+  background-color: #64727d;
+  box-shadow: inset 0 -3px #ffffff;
+}
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#bluetooth,
+#idle_inhibitor,
+#power-profiles-daemon,
+#backlight,
+#language,
+#custom-exit {
+  padding: 0 10px;
+}
+#pulseaudio {
+  color: @maroon;
+}
+#network {
+  color: @yellow;
+}
+#temperature {
+  color: @sky;
+}
+#battery {
+  color: @green;
+}
+#clock {
+  color: @flamingo;
+}
+#cpu {
+  color: @peach;
+}
+#memory {
+  color: @green;
+}
+#window {
+  color: @text;
+}
+.modules-right,
+.modules-left,
+.modules-center {
+  background-color: @base;
+  border-radius: 15px;
+}
+.modules-right {
+  padding: 0 10px;
+}
+.modules-left {
+  padding: 0 20px;
+}
+.modules-center {
+  padding: 0 10px;
+}
+#battery.charging,
+#battery.plugged {
+  color: @sapphire;
+}
+@keyframes blink {
+  to {
+    color: #000000;
+  }
+}
+#battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+label:focus {
+  background-color: #000000;
+}
+#pulseaudio.muted {
+  color: @text;
+}
+#backlight {
+  color: #ffffff;
+}
+#language {
+  color: #ffffff;
+  font-weight: bold;
+}
+#bluetooth {
+  color: @sapphire;
+  padding: 0 10px;
+}
+#custom-exit {
+  color: #ffffff;
+}
