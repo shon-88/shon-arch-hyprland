@@ -1,0 +1,3 @@
+-- TODO: пусто. LSP сейчас настраивается инлайн прямо в init.lua (clangd + nvim-cmp).
+-- Если решишь вынести LSP-конфигурацию сюда — не забудь добавить require('lsp')
+-- в init.lua рядом с require('options') / require('keymaps') / ...
