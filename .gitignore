@@ -1,0 +1,11 @@
+# автогенерируемый packer-файл, не нужен в репо
+nvim/plugin/packer_compiled.lua
+
+# бэкапы и .save-файлы, которые Hyprland/waybar иногда создают
+*.save
+*.save.*
+*.bak
+*.bak2
+*Backup*
+
+.DS_Store
